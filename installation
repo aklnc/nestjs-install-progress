@@ -1,0 +1,16 @@
+// Client Initialization
+npm i @nestjs/cli -g
+
+// Project Initialization
+nest new <<project_name>>
+
+// Module Initialization
+nest g module <<module_name>>
+nest g controller <<module_name>> --no-spec
+nest g service <<module_name>> --no-spec
+
+// Validator Installation for Dtos
+npm i class-validator class-transformer
+
+//TypeOrm Installation for PostgreSQL
+npm i typeorm @nestjs/typeorm pg
