@@ -1,0 +1,4 @@
+//Docker DB awake:
+docker run --name <<db_name>> -p <<serv_port>>:<<postgres_port>> -e POSTGRES_PASSWORD=<<postgres_password>> -d <<cloud_name>>
+
+docker run --name postgres-nest -p 8778:5432 -e POSTGRES_PASSWORD=postgres -d postgres
