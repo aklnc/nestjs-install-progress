@@ -14,3 +14,6 @@ npm i class-validator class-transformer
 
 //TypeOrm Installation for PostgreSQL
 npm i typeorm @nestjs/typeorm pg
+
+// JWT Installation
+npm i @nestjs/jwt @nestjs/passport passport passport-jwt @types/passport-jwt
