@@ -1,0 +1,28 @@
+// REPOSITORY //
+import { Injectable } from '@nestjs/common';
+import { EntityRepository, Repository, DataSource } from 'typeorm';
+import { <<EntityName>> } from './dto/structure.entity';
+
+@Injectable()
+@EntityRepository(<<EntityName>>)
+export class StructureRepository extends Repository<<<EntityName>>> {
+    constructor(private dataSource: DataSource) {
+        super(Structure, dataSource.createEntityManager());
+      }
+}
+
+// SEVICE //
+import { Injectable } from '@nestjs/common';
+import { <<RepositoryName>> } from './structure.repository';
+import { <<EntityName>> } from './dto/structure.entity';
+
+@Injectable()
+export class StructuresService {
+  constructor(private structureRepository: RepositoryName) {}
+  async getTowers(): Promise<<<EntityName>>[]> {
+    const query = this.structureRepository.createQueryBuilder();
+
+    const structures = await query.getMany();
+    return structures;
+  }
+}
