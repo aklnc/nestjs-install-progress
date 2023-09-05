@@ -7,7 +7,7 @@ import { <<EntityName>> } from './dto/structure.entity';
 @EntityRepository(<<EntityName>>)
 export class StructureRepository extends Repository<<<EntityName>>> {
     constructor(private dataSource: DataSource) {
-        super(Structure, dataSource.createEntityManager());
+        super(<<EntityName>>, dataSource.createEntityManager());
       }
 }
 
